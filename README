@@ -1,6 +1,9 @@
 简介：
 这是一个根据北京航空航天大学《计算机网络实验教程》编写的OMNeT++和INET框架教程，工程以仿真的形式复现了绝大多数计网实验课程的实验场景，供同学们学习和参考。
-详细的仿真实验配置说明请参考工程下文件：OMNeT++&INET&BUAANetworkExperimentTutorial 说明手册.docx
+安装方式和详细的仿真实验配置说明请参考工程下文件：OMNeT++&INET&BUAANetworkExperimentTutorial 说明手册.docx
+
+版本：
+采用OMNeT++ 5.6.2 Windows版本，和INET Framework 4.2.2版本，暂不支持INET4.3以上的版本请读者注意。用户请先安装OMNeT++和INET。
 
 作者：
 钱程
@@ -10,7 +13,7 @@ Email: bjchengqian@buaa.edu.cn
 
 
 Introduction:
-This is a Tutorial for Computer Network and OMNeT++ with INET Framework.
+This is a Tutorial for Computer Networks and OMNeT++ with INET Framework.
 
 Author:
 Qian Cheng
