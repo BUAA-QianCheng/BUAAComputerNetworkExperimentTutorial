@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<OSPFASConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OSPF.xsd">
+
+  <!-- Areas -->
+  <Area id="0.0.0.0">
+    <AddressRange address="10.0.0.1" mask="255.255.255.255" />
+    <AddressRange address="10.0.1.1" mask="255.255.255.255" />
+    <AddressRange address="100.0.0.0" mask="255.255.255.0" />
+    <AddressRange address="202.0.2.0" mask="255.255.255.0" />
+    <AddressRange address="202.0.1.0" mask="255.255.255.0" />
+    <AddressRange address="200.0.0.0" mask="255.255.255.0" />
+  </Area>
+
+  <!-- Routers -->
+  <Router name="RT1" RFC1583Compatible="true">
+    <PointToPointInterface ifName="ppp0" areaID="0.0.0.0"/>
+  </Router>
+  <Router name="RT2" RFC1583Compatible="true">
+    <PointToPointInterface ifName="ppp0" areaID="0.0.0.0"/>
+  </Router>
+  <Router name="LSRA" RFC1583Compatible="true">
+    <PointToPointInterface ifName="ppp0" areaID="0.0.0.0"/>
+    <PointToPointInterface ifName="ppp1" areaID="0.0.0.0"/>
+  </Router>
+  <Router name="LSRB" RFC1583Compatible="true">
+    <PointToPointInterface ifName="ppp0" areaID="0.0.0.0"/>
+    <PointToPointInterface ifName="ppp1" areaID="0.0.0.0"/>
+  </Router>
+  <Router name="LSRC" RFC1583Compatible="true">
+    <PointToPointInterface ifName="ppp0" areaID="0.0.0.0"/>
+    <PointToPointInterface ifName="ppp1" areaID="0.0.0.0"/>
+  </Router>
+</OSPFASConfig>

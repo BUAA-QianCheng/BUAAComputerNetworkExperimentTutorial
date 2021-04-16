@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<BGPConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="BGP.xsd">
+
+    <TimerParams>
+        <connectRetryTime> 120 </connectRetryTime>
+        <holdTime> 180 </holdTime>
+        <keepAliveTime> 60 </keepAliveTime>
+        <startDelay> 15 </startDelay>
+    </TimerParams>
+
+    <AS id="1">
+    	<Router interAddr="10.0.0.99"/>
+    	<Router interAddr="10.0.0.100"/>
+    	<Router interAddr="10.0.0.101"/>
+    	<Router interAddr="10.0.0.102"/>
+    	<Router interAddr="10.0.0.103"/>
+        <Router interAddr="10.0.0.104"/>
+        <Router interAddr="10.0.0.105"/>
+        <Router interAddr="10.0.0.106"/>
+        <Router interAddr="10.0.0.107"/>
+        <Router interAddr="10.0.0.108"/>
+    </AS>
+
+	<AS id="2">
+		<Router interAddr="10.0.0.74"/>
+		<Router interAddr="10.0.0.75"/>
+		<Router interAddr="10.0.0.76"/>
+		<Router interAddr="10.0.0.77"/>
+        <Router interAddr="10.0.0.233"/>
+        <Router interAddr="10.0.0.234"/>
+        <Router interAddr="10.0.0.235"/>
+        <Router interAddr="10.0.0.236"/>
+    </AS>
+    
+    <AS id="3">
+        <Router interAddr="10.0.0.118"/>
+        <Router interAddr="10.0.0.122"/>
+        <Router interAddr="10.0.0.126"/>
+        <Router interAddr="10.0.0.142"/>
+        <Router interAddr="10.0.0.146"/>
+        <Router interAddr="10.0.0.150"/>
+    </AS>
+	<AS id="4">
+        <Router interAddr="10.0.0.166"/>
+        <Router interAddr="10.0.0.170"/>
+        <Router interAddr="10.0.0.182"/>
+        <Router interAddr="10.0.0.186"/>
+    </AS>
+
+    <Session id="1">
+        <Router exterAddr="10.0.0.197" > </Router>
+        <Router exterAddr="10.0.0.198" > </Router> 
+    </Session>
+    <Session id="2">
+        <Router exterAddr="10.0.0.201" > </Router>
+        <Router exterAddr="10.0.0.202" > </Router> 
+    </Session>
+    <Session id="3">
+        <Router exterAddr="10.0.0.205" > </Router>
+        <Router exterAddr="10.0.0.206" > </Router> 
+    </Session>
+    <Session id="4">
+        <Router exterAddr="10.0.0.209" > </Router>
+        <Router exterAddr="10.0.0.210" > </Router> 
+    </Session>
+    <Session id="5">
+        <Router exterAddr="10.0.0.213" > </Router>
+        <Router exterAddr="10.0.0.214" > </Router> 
+    </Session>
+    <Session id="6">
+        <Router exterAddr="10.0.0.241" > </Router>
+        <Router exterAddr="10.0.0.242" > </Router> 
+    </Session>
+    <Session id="7">
+        <Router exterAddr="10.0.0.245" > </Router>
+        <Router exterAddr="10.0.0.246" > </Router> 
+    </Session>
+</BGPConfig>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<OSPFASConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OSPF.xsd">
+
+  <!-- Areas -->
+  <Area id="0.0.0.0">
+    <AddressRange address="1.1.1.1" mask="255.255.255.255" />
+    <AddressRange address="2.2.2.2" mask="255.255.255.255" />
+    <AddressRange address="5.5.5.5" mask="255.255.255.255" />
+    <AddressRange address="6.6.6.6" mask="255.255.255.255" />
+    <AddressRange address="168.1.1.0" mask="255.255.255.0" />
+  </Area>
+
+  <!-- Routers -->
+  <Router name="R1" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.0" />
+    <LoopbackInterface ifName="lo0"/>
+  </Router>
+  <Router name="R2" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.0"/>
+    <LoopbackInterface ifName="lo0"/>
+  </Router>
+  <Router name="S1" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.0"/>
+    <LoopbackInterface ifName="lo0"/>
+  </Router>
+  <Router name="S2" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.0"/>
+    <LoopbackInterface ifName="lo0"/>
+  </Router>  
+</OSPFASConfig>

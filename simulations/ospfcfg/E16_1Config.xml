@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<OSPFASConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OSPF.xsd">
+
+  <!-- Areas -->
+  <Area id="0.0.0.0">
+    <AddressRange address="10.0.0.96" mask="255.255.255.240" />
+  </Area>
+  
+  <Area id="0.0.0.2">
+  	<AddressRange address="10.0.0.0" mask="255.255.255.248" />
+  	<AddressRange address="10.0.0.8" mask="255.255.255.248" />
+  	<AddressRange address="10.0.0.16" mask="255.255.255.248" />
+  	<AddressRange address="10.0.0.24" mask="255.255.255.248" />
+  	<AddressRange address="10.0.0.80" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.88" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.116" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.120" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.124" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.128" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.132" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.136" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.140" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.144" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.148" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.152" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.156" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.216" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.220" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.224" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.228" mask="255.255.255.252" />
+  </Area>
+  
+  <Area id="0.0.0.3">
+  	<AddressRange address="10.0.0.32" mask="255.255.255.248" />
+  	<AddressRange address="10.0.0.40" mask="255.255.255.248" />
+  	<AddressRange address="10.0.0.48" mask="255.255.255.248" />
+  	<AddressRange address="10.0.0.56" mask="255.255.255.248" />
+  	<AddressRange address="10.0.0.84" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.92" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.160" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.164" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.168" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.172" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.176" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.180" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.184" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.188" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.192" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.248" mask="255.255.255.252" />
+  	<AddressRange address="10.0.0.252" mask="255.255.255.252" />
+  	<AddressRange address="10.0.1.0" mask="255.255.255.252" />
+  	<AddressRange address="10.0.1.4" mask="255.255.255.252" />
+  </Area>
+
+  <!-- Routers -->
+  <Router name="rt1" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.0"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.0"/>
+  </Router>
+  <Router name="rt2" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.0"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.0"/>
+  </Router>
+  <Router name="rt3" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.0"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.0"/>
+  </Router>
+  <Router name="rt4" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.0"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.0"/>
+  </Router>
+  <Router name="rt5" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.0"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.0"/>
+  </Router>
+  <Router name="Eudemon" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.0"/>
+    <BroadcastInterface ifName="eth2" areaID="0.0.0.0"/>
+  </Router>
+  
+  <Router name="rt6" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.2"/>
+  </Router>
+  <Router name="rt7" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.2"/>
+  </Router>
+  <Router name="rt8" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.2"/>
+  </Router>
+  <Router name="ls3" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth2" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth3" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth4" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth5" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth6" areaID="0.0.0.2"/>
+  </Router>
+  <Router name="ls4" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth2" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth3" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth4" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth5" areaID="0.0.0.2"/>
+  </Router>
+  <Router name="rt9" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth2" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth3" areaID="0.0.0.2"/>
+  </Router>
+  <Router name="rt10" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth2" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth3" areaID="0.0.0.2"/>
+  </Router>
+  <Router name="rt11" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth2" areaID="0.0.0.2"/>
+  </Router>
+  <Router name="rt12" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth2" areaID="0.0.0.2"/>
+  </Router>
+  <Router name="rt13" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth2" areaID="0.0.0.2"/>
+  </Router>
+  <Router name="rt14" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.2"/>
+    <BroadcastInterface ifName="eth2" areaID="0.0.0.2"/>
+  </Router>
+  
+  <Router name="rt19" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.3"/>
+  </Router>
+  <Router name="rt20" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.3"/>
+  </Router>
+  <Router name="ls9" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth2" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth3" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth4" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth5" areaID="0.0.0.3"/>
+  </Router>
+  <Router name="ls10" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth2" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth3" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth4" areaID="0.0.0.3"/>
+  </Router>
+  <Router name="rt21" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth2" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth3" areaID="0.0.0.3"/>
+  </Router>
+  <Router name="rt22" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth2" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth3" areaID="0.0.0.3"/>
+  </Router>
+  <Router name="rt23" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth2" areaID="0.0.0.3"/>
+  </Router>    
+  <Router name="rt24" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth2" areaID="0.0.0.3"/>
+  </Router>  
+  <Router name="rt25" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth2" areaID="0.0.0.3"/>
+  </Router>  
+  <Router name="rt26" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.3"/>
+    <BroadcastInterface ifName="eth2" areaID="0.0.0.3"/>
+  </Router>  
+</OSPFASConfig>
