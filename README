@@ -1,8 +1,18 @@
+简介：
+这是一个根据北京航空航天大学《计算机网络实验教程》编写的OMNeT++和INET框架教程，工程复现了绝大多数计网实验课程的实验场景，供同学们学习和参考。
+
+作者：
+钱程
+北京航空航天大学 网络技术北京市重点实验室
+Email: bjchengqian@buaa.edu.cn
+电话/微信: 13611080628
+
+
 Introduction:
 This is a Tutorial for Computer Network and OMNeT++ with INET Framework.
 
 Author:
 Qian Cheng
-Beijing Key Lab of Network Technology. Beihang University
-Email: / bjchengqian@buaa.edu.cn
+Beijing Key Lab of Network Technology, Beihang University.
+Email: bjchengqian@buaa.edu.cn
 Tel: 13611080628
