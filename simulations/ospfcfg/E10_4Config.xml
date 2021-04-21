@@ -10,21 +10,25 @@
     <AddressRange address="10.4.1.0" mask="255.255.255.0" />
     <AddressRange address="10.5.1.0" mask="255.255.255.0" />
     <AddressRange address="10.6.1.0" mask="255.255.255.0" />
+    <AddressRange address="10.7.1.0" mask="255.255.255.0" />
+    <AddressRange address="3.3.3.3" mask="255.255.255.255"/>
   </Area>
   <!-- Routers -->
   <Router name="R1" RFC1583Compatible="true">
     <BroadcastInterface ifName="eth0" interfaceMode = "Passive"/>
   	<BroadcastInterface ifName="eth1"/>
-  	<BroadcastInterface ifName="eth2" interfaceOutputCost = "100"/>
+  	<BroadcastInterface ifName="eth2"/>
   </Router>
   <Router name="R2" RFC1583Compatible="true">
     <BroadcastInterface ifName="eth0" interfaceMode = "Passive"/>
     <BroadcastInterface ifName="eth1"/>
     <BroadcastInterface ifName="eth2"/>
+    <BroadcastInterface ifName="eth3"/>
   </Router>
   <Router name="R3" RFC1583Compatible="true">
+  	<LoopbackInterface ifName="lo0"/>
     <BroadcastInterface ifName="eth0"/>
-    <BroadcastInterface ifName="eth1" interfaceOutputCost = "100"/>
+    <BroadcastInterface ifName="eth1"/>
   </Router>
   <Router name="R4" RFC1583Compatible="true">
     <BroadcastInterface ifName="eth0" interfaceMode = "Passive"/>

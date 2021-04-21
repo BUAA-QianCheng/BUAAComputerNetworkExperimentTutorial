@@ -14,7 +14,9 @@
     <BroadcastInterface ifName="eth0" areaID="0.0.0.0" />
     <BroadcastInterface ifName="eth1" areaID="0.0.0.0" />
   </Router>
-  <Router name="R1" RFC1583Compatible="true"/>
+  <Router name="R1" RFC1583Compatible="true">
+  	<BroadcastInterface ifName="eth0" areaID="0.0.0.0"/>
+  </Router>
   <Router name="R2" RFC1583Compatible="true">
     <BroadcastInterface ifName="eth0" areaID="0.0.0.0"/>
   </Router>

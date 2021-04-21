@@ -12,14 +12,14 @@
   <!-- Routers -->
   <Router name="R1" RFC1583Compatible="true">
     <BroadcastInterface ifName="eth0" areaID="0.0.0.0"/>
-  	<BroadcastInterface ifName="eth1" areaID="0.0.0.0"/>
+  	<BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceMode="Passive" />
   </Router>
   <Router name="R2" RFC1583Compatible="true">
-    <BroadcastInterface ifName="eth0" areaID="0.0.0.0"/>
-    <BroadcastInterface ifName="eth1" areaID="0.0.0.0"/>
-  </Router>
-  <Router name="R3" RFC1583Compatible="true">
     <BroadcastInterface ifName="eth0" areaID="0.0.0.0" />
+    <BroadcastInterface ifName="eth1" areaID="0.0.0.0" interfaceMode="Passive" />
+  </Router>
+  <Router name="S1" RFC1583Compatible="true">
+    <BroadcastInterface ifName="eth0" areaID="0.0.0.0" interfaceMode="Passive" />
     <BroadcastInterface ifName="eth1" areaID="0.0.0.0" />
     <BroadcastInterface ifName="eth2" areaID="0.0.0.0" />
   </Router>
