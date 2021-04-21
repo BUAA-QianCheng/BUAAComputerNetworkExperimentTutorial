@@ -3,7 +3,7 @@
 安装方式和详细的仿真实验配置说明请参考工程下文件：OMNeT++&INET&BUAANetworkExperimentTutorial 说明手册.docx
 
 版本：
-采用OMNeT++ 5.6.2 Windows版本，和INET Framework 4.2.2版本，暂不支持INET4.3以上的版本请读者注意。用户请先根据官网（https://omnetpp.org/ https://inet.omnetpp.org/）文档安装OMNeT++和INET。
+采用OMNeT++ 5.6.2 Windows版本，和INET Framework 4.2.2版本，暂不支持INET4.3以上的版本请读者注意。用户请先根据官网文档安装OMNeT++（https://omnetpp.org/）和INET（https://inet.omnetpp.org/）。
 
 作者：
 钱程
