@@ -21,6 +21,7 @@ import inet.node.inet.MulticastRouter;
 import inet.node.ethernet.EtherSwitch;
 import inet.visualizer.integrated.IntegratedVisualizer;
 import inet.networklayer.configurator.ipv4.Ipv4NetworkConfigurator;
+import inet.common.scenario.ScenarioManager;
 
 network E10_1
 {
@@ -93,17 +94,18 @@ network E10_3_1
         PCC: StandardHost {
             @display("p=260,160");
         }
-        S2: EtherSwitch {
-            @display("p=200,160");
-        }
+
         R1: MulticastRouter {
             @display("p=140,100");
         }
         R2: MulticastRouter {
             @display("p=260,100");
         }
-        R3: MulticastRouter {
-            @display("p=200,40");
+        S1: MulticastRouter {
+            @display("p=200,40;i=device/switch");
+        }
+        S2: EtherSwitch {
+            @display("p=200,160");
         }
         configurator: Ipv4NetworkConfigurator {
             @display("p=40,30");
@@ -112,10 +114,10 @@ network E10_3_1
             @display("p=40,90");
         }
     connections:
-        PCA.ethg++ <--> Eth100M <--> R3.ethg++;
+        PCA.ethg++ <--> Eth100M <--> S1.ethg++;
         PCC.ethg++ <--> Eth100M <--> S2.ethg++;
-        R3.ethg++ <--> Eth100M <--> R1.ethg++;
-        R3.ethg++ <--> Eth100M <--> R2.ethg++;
+        S1.ethg++ <--> Eth100M <--> R1.ethg++;
+        S1.ethg++ <--> Eth100M <--> R2.ethg++;
         S2.ethg++ <--> Eth100M <--> R1.ethg++;
         S2.ethg++ <--> Eth100M <--> R2.ethg++;
 
@@ -125,37 +127,31 @@ network E10_3_2
 {
     submodules:
         PCA: StandardHost {
-            @display("p=120,45");
+            @display("p=110,35");
         }
         PCB: StandardHost {
-            @display("p=105,205");
+            @display("p=275,210");
         }
         PCC: StandardHost {
-            @display("p=325,235");
+            @display("p=385,70");
         }
         PCD: StandardHost {
-            @display("p=165,250");
-        }
-        S1: EtherSwitch {
-            @display("p=265,235");
-        }
-        S2: EtherSwitch {
-            @display("p=250,45");
-        }
-        S3: EtherSwitch {
-            @display("p=165,165");
+            @display("p=470,170");
         }
         R1: MulticastRouter {
-            @display("p=180,45");
+            @display("p=185,70");
         }
         R2: MulticastRouter {
-            @display("p=410,150");
+            @display("p=230,140");
         }
         R3: MulticastRouter {
-            @display("p=105,125");
+            @display("p=285,70");
         }
         R4: MulticastRouter {
-            @display("p=210,200");
+            @display("p=400,170");
+        }
+        S1: EtherSwitch {
+            @display("p=330,140");
         }
         configurator: Ipv4NetworkConfigurator {
             @display("p=40,30");
@@ -165,87 +161,39 @@ network E10_3_2
         }
     connections:
         PCA.ethg++ <--> Eth100M <--> R1.ethg++;
-        PCB.ethg++ <--> Eth100M <--> R3.ethg++;
-        PCC.ethg++ <--> Eth100M <--> S1.ethg++;
-        PCD.ethg++ <--> Eth100M <--> S3.ethg++;
-        S1.ethg++ <--> Eth100M <--> R2.ethg++;
-        S1.ethg++ <--> Eth100M <--> R4.ethg++;
-        S2.ethg++ <--> Eth100M <--> R1.ethg++;
-        S2.ethg++ <--> Eth100M <--> R2.ethg++;
-        S2.ethg++ <--> Eth100M <--> R3.ethg++;
-        S3.ethg++ <--> Eth100M <--> R3.ethg++;
-        S3.ethg++ <--> Eth100M <--> R4.ethg++;
-}
-
-network E10_3_3
-{
-    submodules:
-        PCA: StandardHost {
-            @display("p=110,80");
-        }
-        PCB: StandardHost {
-            @display("p=420,80");
-        }
-        S1: EtherSwitch {
-            @display("p=280,80");
-        }
-        R1: MulticastRouter {
-            @display("p=180,80");
-        }
-        R2: MulticastRouter {
-            @display("p=230,30");
-        }
-        R3: MulticastRouter {
-            @display("p=230,130");
-        }
-        R4: MulticastRouter {
-            @display("p=350,80");
-        }
-        configurator: Ipv4NetworkConfigurator {
-            @display("p=40,30");
-        }
-        visualizer: IntegratedVisualizer {
-            @display("p=40,90");
-        }
-    connections allowunconnected:
-        PCA.ethg++ <--> Eth100M <--> R1.ethg++;
-        PCB.ethg++ <--> Eth100M <--> R4.ethg++;
+        PCB.ethg++ <--> Eth100M <--> R2.ethg++;
+        PCC.ethg++ <--> Eth100M <--> R3.ethg++;
+        PCD.ethg++ <--> Eth100M <--> R4.ethg++;
         R1.ethg++ <--> Eth100M <--> R2.ethg++;
         R1.ethg++ <--> Eth100M <--> R3.ethg++;
-        R2.ethg++ <--> Eth100M <--> S1.ethg++;
-        R3.ethg++ <--> Eth100M <--> S1.ethg++;
-        R4.ethg++ <--> Eth100M <--> S1.ethg++;
+        S1.ethg++ <--> Eth100M <--> R2.ethg++;
+        S1.ethg++ <--> Eth100M <--> R3.ethg++;
+        S1.ethg++ <--> Eth100M <--> R4.ethg++;
 }
 
 network E10_4
 {
     submodules:
         PCA: StandardHost {
-            @display("p=120,40");
+            @display("p=139,41");
         }
         PCB: StandardHost {
-            @display("p=75,200");
+            @display("p=139,247");
         }
         PCC: StandardHost {
-            @display("p=285,250");
-        }
-        S1: EtherSwitch {
-            @display("p=215,250");
-        }
-        S2: EtherSwitch {
-            @display("p=150,200");
+            @display("p=388,247");
         }
         R1: MulticastRouter {
-            @display("p=215,40");
+            @display("p=267,41");
         }
         R2: MulticastRouter {
-            @display("p=150,140");
+            @display("p=202,141");
         }
         R3: MulticastRouter {
-            @display("p=275,140");
+            @display("p=327,141");
         }
         R4: MulticastRouter {
-            @display("p=150,250");
+            @display("p=267,247");
         }
         configurator: Ipv4NetworkConfigurator {
             @display("p=40,30");
@@ -253,15 +201,12 @@ network E10_4
         visualizer: IntegratedVisualizer {
             @display("p=40,90");
         }
-
     connections:
         PCA.ethg++ <--> Eth100M <--> R1.ethg++;
-        PCB.ethg++ <--> Eth100M <--> S2.ethg++;
-        PCC.ethg++ <--> Eth100M <--> S1.ethg++;
-        S1.ethg++ <--> Eth100M <--> R4.ethg++;
-        S2.ethg++ <--> Eth100M <--> R2.ethg++;
-        S2.ethg++ <--> Eth100M <--> R4.ethg++;
+        PCB.ethg++ <--> Eth100M <--> R2.ethg++;
+        PCC.ethg++ <--> Eth100M <--> R4.ethg++;
         R1.ethg++ <--> Eth100M <--> R2.ethg++;
         R1.ethg++ <--> Eth100M <--> R3.ethg++;
         R2.ethg++ <--> Eth100M <--> R3.ethg++;
+        R2.ethg++ <--> Eth100M <--> R4.ethg++;
 }
