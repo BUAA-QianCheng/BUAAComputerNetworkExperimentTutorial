@@ -25,11 +25,11 @@
 		<DenyASOUT> 200 </DenyASOUT>
         <Router interAddr="3.1.1.1">
             <Network address="3.1.0.0"/>
-        	<Neighbor address="3.1.1.2" nextHopSelf='true' />
+        	<Neighbor address="3.1.1.2" nextHopSelf="true"/>
         </Router>
         <Router interAddr="3.1.1.2">
         	<Network address="6.6.6.6"/>
-        	<Neighbor address="3.1.1.1" nextHopSelf='true' />
+        	<Neighbor address="3.1.1.1" nextHopSelf="true"/>
         </Router>
     </AS>
     

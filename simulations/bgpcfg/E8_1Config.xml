@@ -16,10 +16,10 @@
 
 	<AS id="300">
         <Router interAddr="3.1.1.1">
-        	<Neighbor address="3.1.1.2" nextHopSelf='true' />
+        	<Neighbor address="3.1.1.2" nextHopSelf="true"/>
         </Router>
         <Router interAddr="3.1.1.2">
-        	<Neighbor address="3.1.1.1" nextHopSelf='true' />
+        	<Neighbor address="3.1.1.1" nextHopSelf="true"/>
         </Router>
     </AS>
     

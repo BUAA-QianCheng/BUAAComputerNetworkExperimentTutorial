@@ -8,28 +8,30 @@
     </TimerParams>
 
     <AS id="100">
-        <Router interAddr="21.0.0.1">
+        <Router interAddr="20.0.0.1">
+        	<Neighbor address="20.0.0.2" nextHopSelf="true" localPreference='50'/>
+        </Router>
+        <Router interAddr="30.0.0.2">
+        </Router>
+        <Router interAddr="20.0.0.2">
        		<Network address="19.0.0.1"/>
-       		<Neighbor address="21.0.0.2" nextHopSelf="true"/>
+       		<Neighbor address="30.0.0.2" nextHopSelf="true" localPreference='200'/>
         </Router>
-        <Router interAddr="21.0.0.2">
-        	<Neighbor address="21.0.0.1" nextHopSelf="false"/>
-        </Router>
+
     </AS>
 
 	<AS id="200">
         <Router interAddr="18.0.0.1">
-        	<Network address="18.0.0.1"/>
-        	<Neighbor address="10.0.0.3" nextHopSelf="false"/>
-        </Router>
-        <Router interAddr="10.0.0.3">
-        	<Network address="20.0.0.1"/>
-        	<Neighbor address="18.0.0.1" nextHopSelf="true"/>
+       		<Network address="18.0.0.1"/>
         </Router>
     </AS>
-
+    
     <Session id="1">
         <Router exterAddr="10.0.0.1"/>
         <Router exterAddr="10.0.0.2"/> 
+    </Session>
+	<Session id="2">
+        <Router exterAddr="40.0.0.1"/>
+        <Router exterAddr="40.0.0.2"/>
     </Session>
 </BGPConfig>

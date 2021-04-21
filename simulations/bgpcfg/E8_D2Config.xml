@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<BGPConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="BGP.xsd">
+    <TimerParams>
+        <connectRetryTime> 120 </connectRetryTime>
+        <holdTime> 180 </holdTime>
+        <keepAliveTime> 60 </keepAliveTime>
+        <startDelay> 5 </startDelay>
+    </TimerParams>
+
+    <AS id="100">
+        <Router interAddr="1.1.1.1">
+       		<Network address="1.1.1.1"/>
+        </Router>
+    </AS>
+
+	<AS id="200">
+		<DenyASOUT> 300 </DenyASOUT>
+        <Router interAddr="3.3.3.3">
+       		<Network address="3.3.3.3"/>
+        </Router>
+    </AS>
+    
+	<AS id="300">
+        <Router interAddr="4.4.4.4">
+       		<Network address="4.4.4.4"/>
+        </Router>
+    </AS>
+    
+	<AS id="400">
+        <Router interAddr="2.2.2.2">
+       		<Network address="2.2.2.2"/>
+        </Router>
+    </AS>
+
+    <Session id="1">
+        <Router exterAddr="11.2.1.1"/>
+        <Router exterAddr="11.2.1.2"/> 
+    </Session>
+	<Session id="2">
+        <Router exterAddr="11.3.1.1"/>
+        <Router exterAddr="11.3.1.2"/> 
+    </Session>
+    <Session id="3">
+        <Router exterAddr="11.4.1.1"/>
+        <Router exterAddr="11.4.1.2"/> 
+    </Session>
+</BGPConfig>
